@@ -1,0 +1,35 @@
+{
+  "name": "@hexlet/code",
+  "version": "1.0.0",
+  "description": "[![Actions Status](https://github.com/gybins/qa-auto-engineer-javascript-project-87/actions/workflows/hexlet-check.yml/badge.svg)](https://github.com/gybins/qa-auto-engineer-javascript-project-87/actions)",
+  "keywords": [],
+  "homepage": "https://github.com/gybins/qa-auto-engineer-javascript-project-87#readme",
+  "bugs": {
+    "url": "https://github.com/gybins/qa-auto-engineer-javascript-project-87/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gybins/qa-auto-engineer-javascript-project-87.git"
+  },
+  "license": "ISC",
+  "author": "",
+  "type": "module",
+  "main": "index.js",
+  "bin": {
+    "code": "bin/gendiff.js"
+  },
+  "scripts": {
+    "test": "jest",
+    "lint": "eslint ."
+  },
+  "dependencies": {
+    "commander": "^15.0.0",
+    "eslint": "^10.8.0",
+    "jest": "^30.4.2",
+    "js-yaml": "^5.2.2"
+  },
+  "devDependencies": {
+    "@eslint/js": "^10.0.1",
+    "globals": "^17.8.0"
+  }
+}
