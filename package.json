@@ -19,17 +19,17 @@
     "code": "bin/gendiff.js"
   },
   "scripts": {
-    "test": "jest",
+    "test": "node --experimental-vm-modules node_modules/jest/bin/jest.js",
     "lint": "eslint ."
   },
   "dependencies": {
     "commander": "^15.0.0",
-    "eslint": "^10.8.0",
-    "jest": "^30.4.2",
     "js-yaml": "^5.2.2"
   },
   "devDependencies": {
     "@eslint/js": "^10.0.1",
-    "globals": "^17.8.0"
+    "eslint": "^10.8.0",
+    "globals": "^17.8.0",
+    "jest": "^30.4.2"
   }
 }
