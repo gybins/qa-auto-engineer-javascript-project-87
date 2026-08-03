@@ -1,22 +1,18 @@
-name: Node CI
+steps:
+  - uses: actions/checkout@v6
 
-on:
-  push:
-  pull_request:
+  - uses: actions/setup-node@v6
+    with:
+      node-version: 24
+      cache: npm
 
-jobs:
-  build:
-    runs-on: ubuntu-latest
+  - run: npm install
 
-    steps:
-      - uses: actions/checkout@v6
+  - run: ls -l node_modules/.bin
+  - run: file node_modules/.bin/eslint
+  - run: node -v
+  - run: npm -v
+  - run: npx eslint --version
 
-      - uses: actions/setup-node@v6
-        with:
-          node-version: 24
-          cache: npm
-
-      - run: make ci
-      - run: ls -l node_modules/.bin
-      - run: node -v
-      - run: npm -v
+  - run: make lint
+  - run: make test
