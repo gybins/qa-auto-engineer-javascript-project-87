@@ -1,2 +1,3 @@
 ### Hexlet tests and linter status:
 [![Actions Status](https://github.com/gybins/qa-auto-engineer-javascript-project-87/actions/workflows/hexlet-check.yml/badge.svg)](https://github.com/gybins/qa-auto-engineer-javascript-project-87/actions)
+[![Node CI](https://github.com/gybins/qa-auto-engineer-javascript-project-87/actions/workflows/gendeif_test.yml/badge.svg)](https://github.com/gybins/qa-auto-engineer-javascript-project-87/actions/workflows/gendeif_test.yml)
