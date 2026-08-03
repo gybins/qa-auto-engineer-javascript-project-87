@@ -17,10 +17,5 @@ test('check diff between files', () => {
         .readFileSync(getFixturePath('expected.txt'), 'utf-8')
         .trim()
 
-const result = genDiff(filepath1, filepath2);
-
-console.log(JSON.stringify(expected));
-console.log(JSON.stringify(result));
-
-expect(result).toBe(expected)
+  expect(genDiff(filepath1, filepath2)).toBe(expected);
 })
