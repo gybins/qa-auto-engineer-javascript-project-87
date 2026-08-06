@@ -4,17 +4,17 @@ const formatStylish = (diff) => {
 
     for (const item of diff) {
         if (item.type === 'removed')  {
-            lines.push(`- ${item.key}: ${item.value}`)
+            lines.push(` - ${item.key}: ${item.value}`)
     }
         if (item.type === 'added') {
-            lines.push(`+ ${item.key}: ${item.value}`)
+            lines.push(` + ${item.key}: ${item.value}`)
         }
         if (item.type === 'changed') {
-            lines.push(`- ${item.key}: ${item.oldValue}`)
-            lines.push(`+ ${item.key}: ${item.newValue}`)
+            lines.push(` - ${item.key}: ${item.oldValue}`)
+            lines.push(` + ${item.key}: ${item.newValue}`)
         }
         if (item.type === 'unchanged') {
-            lines.push(`  ${item.key}: ${item.value}`)
+            lines.push(` ${item.key}: ${item.value}`)
         }
     }
 
