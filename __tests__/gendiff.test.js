@@ -21,8 +21,15 @@ test('check diff between json', () => {
         .readFileSync(getFixturePath('plain.txt'), 'utf-8')
         .trim()
 
+    const expectedJson = fs
+        .readFileSync(getFixturePath('json.txt'), 'utf-8')
+        .trim()
+
+
+
   expect(genDiff(filepath1, filepath2)).toBe(expected);
   expect(genDiff(filepath1, filepath2, 'plain')).toBe(expectedPlain);
+  expect(genDiff(filepath1, filepath2, 'json')).toBe(expectedJson);
 })
 test('check diff between yml', () => {
     const filepath1 = getFixturePath('file1.yml');
@@ -37,9 +44,14 @@ test('check diff between yml', () => {
     const expectedPlain = fs
         .readFileSync(getFixturePath('plain.txt'), 'utf-8')
         .trim()
+
+    const expectedJson = fs
+        .readFileSync(getFixturePath('json.txt'), 'utf-8')
+        .trim()
         
 
 
   expect(genDiff(filepath1, filepath2)).toBe(expected);
   expect(genDiff(filepath1, filepath2, 'plain')).toBe(expectedPlain);
+  expect(genDiff(filepath1, filepath2, 'json')).toBe(expectedJson);
 })

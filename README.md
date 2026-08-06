@@ -4,3 +4,4 @@
 [![Quality gate status](https://sonarcloud.io/api/project_badges/measure?project=gybins_qa-auto-engineer-javascript-project-87&metric=alert_status)](https://sonarcloud.io/summary/new_code?id=gybins_qa-auto-engineer-javascript-project-87)
 [![asciicast](https://asciinema.org/a/QJdFmHVrWj0SmE2w.svg)](https://asciinema.org/a/QJdFmHVrWj0SmE2w)
 [![asciicast](https://asciinema.org/a/JjRNwhBVQYYjzLzS.svg)](https://asciinema.org/a/JjRNwhBVQYYjzLzS)
+[![asciicast](https://asciinema.org/a/vOa0gYTBgpRGILnG.svg)](https://asciinema.org/a/vOa0gYTBgpRGILnG) 
