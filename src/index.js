@@ -1,7 +1,8 @@
 
 import parse from './parsers/parse.js'
+import formatStylish from './formatters/stylish.js'
 
-const genDiff = (filepath1, filepath2) => {
+const genDiff = (filepath1, filepath2, format) => {
     const data1 = parse(filepath1)
     const data2 = parse(filepath2)
     const keys1 = Object.keys(data1)
@@ -22,30 +23,38 @@ const genDiff = (filepath1, filepath2) => {
         const value2 = data2[key]
 
         if(hasKey1 && !hasKey2) {
-            result.push(`- ${key}: ${value1}`)
-        } 
+            result.push({key,
+                        type: 'removed',
+                        value: value1})
+            }   
         
         if(!hasKey1 && hasKey2) {
-            result.push(`+ ${key}: ${value2}`)
+            result.push({key,
+                        type: 'added',
+                        value: value2
+                        
+        })
         } 
 
         if(hasKey1 && hasKey2 && value1 !== value2) {
 
-            result.push(`- ${key}: ${value1}`)
-            result.push(`+ ${key}: ${value2}`);
+            result.push({key,
+                        type: 'changed',
+                        oldValue: value1,
+                        newValue: value2})
         } 
 
         if(hasKey1 && hasKey2 && value1 === value2) {
 
-            result.push(`  ${key}: ${value1}`)
+            result.push({key,
+                        type: 'unchanged',
+                        value: value2,})
         } 
     }
+        return formatStylish(result)
 
-    const output = result.join('\n')
-
-    return `{
-${output}
-}`
 }
+
+
 
 export default genDiff
