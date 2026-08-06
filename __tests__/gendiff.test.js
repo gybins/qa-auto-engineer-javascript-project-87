@@ -17,15 +17,29 @@ test('check diff between json', () => {
         .readFileSync(getFixturePath('expected.txt'), 'utf-8')
         .trim()
 
+    const expectedPlain = fs
+        .readFileSync(getFixturePath('plain.txt'), 'utf-8')
+        .trim()
+
   expect(genDiff(filepath1, filepath2)).toBe(expected);
+  expect(genDiff(filepath1, filepath2, 'plain')).toBe(expectedPlain);
 })
 test('check diff between yml', () => {
     const filepath1 = getFixturePath('file1.yml');
     const filepath2 = getFixturePath('file2.yml');
 
+
     const expected = fs
         .readFileSync(getFixturePath('expected.txt'), 'utf-8')
         .trim()
 
+        
+    const expectedPlain = fs
+        .readFileSync(getFixturePath('plain.txt'), 'utf-8')
+        .trim()
+        
+
+
   expect(genDiff(filepath1, filepath2)).toBe(expected);
+  expect(genDiff(filepath1, filepath2, 'plain')).toBe(expectedPlain);
 })
