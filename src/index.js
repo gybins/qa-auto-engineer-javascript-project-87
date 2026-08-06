@@ -2,7 +2,7 @@
 import parse from './parsers/parse.js'
 import formatStylish from './formatters/stylish.js'
 
-const genDiff = (filepath1, filepath2, format) => {
+const genDiff = (filepath1, filepath2) => {
     const data1 = parse(filepath1)
     const data2 = parse(filepath2)
     const keys1 = Object.keys(data1)
